@@ -1,0 +1,150 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  background: $main-green;
+  transition: top 0.8s ease;
+
+  @include mq("md") {
+    top: -80px;
+  }
+}
+
+@include mq("md") {
+  .animate-scroll {
+    background-color: white;
+    box-shadow: $box-shaddow1;
+    top: 0px !important;
+  }
+}
+
+.header {
+  height: 80px;
+  padding: 0 5%;
+  @include flexy($dir: row, $align: center, $just: space-between);
+
+  &__logo {
+    cursor: pointer;
+    @include mq("md") {
+      margin-left: 2em;
+    }
+
+    @include mq("2xl") {
+      margin-left: 0;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    @include flexy($dir: column, $align: center, $just: center);
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.8s ease;
+    margin: 0 auto;
+    background: $main-green;
+
+    ul {
+      @include flexy($dir: column, $align: center, $just: flex-start);
+      flex-grow: 1;
+      width: 100%;
+      padding: 2em 0;
+      li {
+        position: relative;
+        padding-top: 3em;
+        text-transform: uppercase;
+        color: $fc-dark;
+        font-size: $fs-xl;
+        font-weight: 400;
+        cursor: pointer;
+
+        ::before {
+          position: absolute;
+          content: "";
+          height: 12px;
+          width: 12px;
+          background-color: $green-tint;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          clip-path: polygon(50% 30%, 100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+          opacity: 0;
+          transition: opacity 0.4s ease-in-out;
+        }
+
+        a{
+          color: $fc-dark;
+        }
+      }
+    }
+
+    &__active {
+      left: 0;
+      transition: all 0.8s ease;
+    }
+
+    @include mq("md") {
+      position: inherit;
+      flex-direction: row;
+      min-height: auto;
+      width: auto;
+      margin: 0;
+      background: transparent;
+      ul {
+        flex-direction: row;
+        padding: 0;
+        background: transparent;
+        align-items: center;
+        justify-content: space-between;
+        li {
+          padding: 0 7px;
+          border-right: 1px solid black;
+          font-size: $fs-sm;
+          &:last-child {
+            border-right: 0;
+          }
+
+          ::before {
+            top: -10px;
+            left: 50%;
+          }
+
+          &:hover {
+            ::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    @include mq("lg") {
+      padding-right: 1em;
+
+      ul li{
+        font-size: $fs-base;
+      }
+    }
+  }
+
+  &__navbarToggle {
+    cursor: pointer;
+    font-size: $fs-2xl;
+    @include mq("md") {
+      display: none;
+    }
+  }
+
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
+.nav__closeBtn,
+.nav__menuBtn {
+  svg {
+    pointer-events: none;
+  }
+}

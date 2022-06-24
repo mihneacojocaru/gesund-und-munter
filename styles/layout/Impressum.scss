@@ -1,0 +1,25 @@
+.impressum{
+    color: $fc-dark;
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: $fs-2xl;
+        line-height: 1.2em;
+        padding: 1em 0;
+    }
+
+    p{
+        padding: 10px;
+
+        a{
+            color: $green-accent-bg;
+        }
+
+        &:last-child{
+            margin-bottom: 2em;
+        }
+    }
+}

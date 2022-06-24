@@ -1,0 +1,79 @@
+.kontakt {
+  max-width: 500px;
+  &__sectionHeader {
+    @include flexy($dir: column, $align: center, $just: center);
+    text-align: center;
+    padding: 1em 0;
+    h2 {
+      @extend %h2-design;
+    }
+    p {
+      max-width: 300px;
+      margin: .2em 0;
+    }
+
+    &--alert{
+        margin: .5em 0 0;
+        color: $green-accent-bg;
+        font-size: $fs-base;
+        @include flexy($dir: column, $align:center, $just:center);
+        span{
+            padding: 0 10px;
+        }
+        div{
+            padding: 10px 0;
+        }
+
+        @include mq('md'){
+            flex-direction: row;
+            font-size: $fs-2xl;
+        }
+    }
+
+    &--error{
+        span{
+            padding: 10px 0;
+            color: $orange-light;
+            font-size: $fs-base;
+
+            @include mq('md'){
+                font-size: $fs-xl;
+            }
+        }
+    }
+  }
+
+  &__form {
+    margin: 0 auto 3em;
+    padding: 0 1em;
+    @include flexy($dir: column);
+    gap: 1em;
+    input,
+    textarea {
+      padding: 10px;
+      background-color: $green-light-bg;
+      border: 1px solid $fc-dark;
+      resize:vertical;
+      &:focus {
+        border: none;
+        outline: 2px solid $green-accent-bg;
+      }
+    }
+
+    button {
+      border: 1px solid $fc-dark;
+      align-self: flex-end;
+      padding: 10px 25px;
+      text-transform: uppercase;
+      
+
+      &:enabled:hover {
+        background-color: $green-light-bg2;
+      }
+
+      &:enabled:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+.about {
+  padding: 2em 0;
+  &__paragraph1 {
+    max-width: $xl;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+    p{
+      font-size: $fs-sm;
+    }
+
+    img {
+      grid-row: 2/3;
+      width: 200px;
+      height: auto;
+      //box-shadow: 7px 7px rgba($main-green, 0.4);
+    }
+
+    &--text1 {
+      grid-row: 1/2;
+      max-width: 600px;
+      padding: 3em 1em;
+      //@include flexy($dir: column, $align: center);
+      align-self: flex-end;
+
+      &-pill {
+        @extend %pill;
+      }
+
+      h2 {
+        @extend %h2-design;
+      }
+
+      p {
+        margin: 1em 0;
+      }
+
+      :nth-child(3) {
+        padding-top: 20px;
+        color: $fc-gray;
+        font-style: italic;
+      }
+    }
+
+    &--text2 {
+      grid-row: 3/-1;
+      max-width: 600px;
+      padding: 3em 1em;
+      p {
+        margin: 1em 0;
+      }
+    }
+
+    @include mq("md") {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 50px auto 1fr 50px;
+
+      p{
+        font-size: $fs-base;
+      }
+
+      img {
+        grid-row: 1/-1;
+        width: 350px;
+        height: auto;
+        margin: 2em 0;
+      }
+
+      &--text1 {
+        grid-row: 2/3;
+        padding: 0 2em;
+        text-align: left;
+      }
+
+      &--text2 {
+        grid-row: 3/4;
+        padding: 0 2em;
+        text-align: left;
+      }
+    }
+  }
+  &__paragraph2 {
+    color: $fc-light;
+    margin: 1em auto;
+    max-width: $xl;
+    display: grid;
+    align-items: flex-start;
+    padding: 0 2em;
+
+    &--text {
+      background-color: $gold-accent;
+      padding: 2em;
+      margin: -3em .5em 0 2em;
+      z-index: 1;
+      max-width: 500px;
+      justify-self: flex-end;
+
+      h3 {
+        font-size: $fs-base;
+        margin: 0.5em 0;
+      }
+
+      p{
+        font-size: $fs-sm;
+      }
+    }
+
+    img {
+      width: 280px;
+      height: auto;
+      padding: 0 0 0 .5em;
+    }
+
+    @include mq("md") {
+      padding: 2em;
+      grid-template-columns: 1fr 1fr;
+      &--text {
+        grid-row: 1/-1;
+        grid-column: 1/2;
+        margin: 30px -150px 0 0;
+        
+        h3 {
+          font-size: $fs-2xl;
+          margin: 0.5em 0;
+        }
+  
+        p{
+          font-size: $fs-base;
+        }
+      }
+      img {
+        grid-row: 1/-1;
+        grid-column: 2/-1;
+        width: auto;
+        height: 300px;
+        transform: scaleX(-1);
+      }
+    }
+
+    @include mq('lg'){
+      padding: 3em;
+      img{
+        width: auto;
+        height: 400px;
+      }
+    }
+  }
+  &__paragraph3 {
+    color: $fc-light;
+    margin: 1em auto;
+    max-width: $xl;
+    display: grid;
+    align-items: flex-start;
+    justify-items: end;
+    padding: 0 2em;
+
+    &--text {
+      background-color: $darkblue;
+      padding: 2em;
+      margin: -2em 2em 0 .5em;
+      max-width: 500px;
+      z-index: 1;
+
+      h3 {
+        font-size: $fs-base;
+        margin: 0.5em 0;
+      }
+
+      p{
+        font-size: $fs-sm;
+      }
+    }
+
+    img {
+      width: 280px;
+      height: auto;
+    }
+
+    @include mq("md") {
+      padding: 2em;
+      grid-template-columns: 1fr 1fr;
+      justify-items: stretch;
+      &--text {
+        grid-row: 1/-1;
+        grid-column: 2/-1;
+        margin: 30px 0 0 -100px;
+        h3{
+          font-size: $fs-2xl;
+        }
+        p{
+          font-size: $fs-base;
+        }
+      }
+      img {
+        grid-row: 1/-1;
+        grid-column: 1/2;
+        width: auto;
+        height: 300px;
+        transform: scaleX(-1);
+      }
+    }
+
+    @include mq('lg'){
+      padding: 3em;
+      img{
+        width: auto;
+        height: 400px;
+      }
+    }
+  }
+  &__paragraph4 {
+    color: $fc-light;
+    margin: 1em auto;
+    max-width: $xl;
+    display: grid;
+    align-items: flex-start;
+    padding: 0 2em;
+
+    &--text {
+      background-color: $gold-accent;
+      max-width: 500px;
+      padding: 2em;
+      margin: -3em .5em 0 2em;
+      z-index: 1;
+      justify-self: flex-end;
+
+      h3 {
+        font-size: $fs-base;
+        margin: 0.5em 0;
+      }
+
+      p{
+        font-size: $fs-sm;
+      }
+    }
+
+    img {
+      width: 280px;
+      height: auto;
+      padding: 0 0 0 .5em;
+    }
+
+    @include mq("md") {
+      padding: 2em;
+      grid-template-columns: 1fr 1fr;
+      &--text {
+        grid-row: 1/-1;
+        grid-column: 1/2;
+        margin: 30px -150px 0 0;
+        h3{
+          font-size: $fs-2xl;
+        }
+        p{
+          font-size: $fs-base;
+        }
+      }
+      img {
+        grid-row: 1/-1;
+        grid-column: 2/-1;
+        width: auto;
+        height: 300px;
+      }
+    }
+
+    @include mq('lg'){
+      padding: 3em;
+      img{
+        width: auto;
+        height: 400px;
+      }
+    }
+  }
+}

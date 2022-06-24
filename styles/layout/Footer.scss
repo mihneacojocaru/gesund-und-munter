@@ -1,0 +1,133 @@
+.footer{
+    background-color: $main-green;
+
+    &__elements{
+        padding: 1em 0;
+        // @include flexy($dir: column, $just: space-around);
+        //grid positioning
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        &--element1{
+            grid-row: 1/2;
+        }
+        &--element3{
+            grid-row: 1/2;
+        }
+        &--element2{
+            grid-row: 3/-1;
+            grid-column: 1/-1;
+        }
+        // end of grid positioning
+
+        &--element1{
+            @include flexy($dir:column, $just:flex-start, $align:center);
+            p{
+                font-size: $fs-lg;
+                text-transform: uppercase;
+                margin: 1em 0;
+                text-align: center;
+            }
+
+            ul{
+                li{
+                    @include flexy($dir:row, $just:flex-start, $align:center);
+                    padding: 10px;
+                    svg{
+                        margin-right: 10px;
+                        font-size: $fs-xl;
+                    }
+
+                    a{
+                        @include flexy($dir:row, $just:flex-start, $align:center);
+                        color: $fc-dark;
+                    }
+                }
+            }
+        }
+
+        &--element2{
+            @include flexy($dir:column, $just:center, $align:center);
+
+            img:nth-child(1){
+                width:200px;
+                height:62px;
+                margin-bottom: 20px;
+            }
+            img:nth-child(2){
+                width: 90px;
+                height: auto;
+            }
+
+            &--logo{
+                cursor: pointer;
+            }
+        }
+
+        &--element3{
+            @include flexy($dir:column, $just:flex-start, $align:center);
+
+            p{
+                font-size: $fs-lg;
+                text-transform: uppercase;
+                margin: 1em 0;
+                text-align: center;
+            }
+
+            span{
+                cursor: pointer;
+                padding: 10px;
+
+                a{
+                    @include flexy($dir:row, $just:center, $align:center);
+                    color: $fc-dark;
+                }
+
+                svg{
+                    margin-right: 5px;
+                    font-size: $fs-xl;
+                }
+            }
+        }
+
+        @include mq('md'){
+            flex-direction: row;
+            padding: 1em 0 3em;
+
+            //grid positioning
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        &--element1{
+            grid-row: 1/-1;
+            grid-column: 1/2;
+        }
+        &--element2{
+            grid-row: 1/-1;
+            grid-column: 2/3;
+        }
+        &--element3{
+            grid-row: 1/-1;
+            grid-column: 3/-1;
+        }
+        // end of grid positioning
+        }
+
+    }
+
+    &__copyright{
+        text-align: center;
+        color: $fc-dark;
+        font-size: $fs-xs;
+        padding: 5px;
+        margin: 0 auto;
+
+        a{
+            color: $green-accent-bg;
+        }
+
+        @include mq('md'){
+            max-width: 100%;
+            font-size: $fs-sm;
+        }
+    }
+}

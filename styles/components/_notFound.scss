@@ -1,0 +1,50 @@
+.notFound {
+
+  min-height: calc(100vh - 700px);
+  @include flexy($dir: column, $align: center, $just:space-around);
+  margin: 3em 0 0;
+
+  &__text{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: $fc-gray;
+    @include flexy($dir: column, $align: center);
+
+    h4{
+        font-size: 50px;
+    }
+
+    p{
+        padding: 20px;
+    }
+
+    h2{
+        font-weight: 500;
+        color: rgb(249, 249, 249);
+        font-size: 120px;
+    }
+  }
+
+  &__image {
+    img {
+      width: 315px;
+      height: auto;
+    }
+    margin: 1em;
+  }
+
+  @include mq("md") {
+    min-height: calc(100vh - 345px);
+    @include flexy($dir: row, $align: center);
+
+  }
+
+  @include mq("lg") {
+    &__image {
+      img {
+        width: auto;
+      }
+    }
+  }
+}

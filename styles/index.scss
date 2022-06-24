@@ -1,0 +1,7 @@
+@import "utilities/variables", "utilities/mixins";
+
+@import "base/reset", "base/base";
+
+@import "components/container", 'components/hero', 'components/philosophie','components/about','components/beratung', 'components/kontakt', 'components/notFound';
+
+@import "layout/Layout.scss","layout/Header.scss", "layout/Footer.scss", "layout/Impressum.scss";

@@ -1,0 +1,68 @@
+.philosophie{
+    padding: 5em 0 7em;
+    &--bg{
+        background-color: $green-light-bg;
+    }
+
+    @include flexy($dir:column,$align:center,$just:center);
+    
+    &__title{
+        @include flexy($dir:column,$align:center,$just:center);
+        margin: 2em 0 1em;
+        span{
+            @extend %pill;
+        }
+        h2{
+            @extend %h2-design;
+        }
+    }
+
+    &__cards{
+        max-width: 1100px;
+        margin-top: 2em;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, minmax(200px , 1fr));
+        gap: 1.5em;
+        pointer-events: none;
+
+        &--card{
+            @include flexy($dir:column,$align:center,$just:flex-start);
+            max-width: 250px;
+            background-color: white;
+            box-shadow: $box-shaddow1;
+
+            svg{
+                margin: .7em 0;
+                font-size: $fs-5xl;
+                color: $main-green;
+            }
+
+            h4{
+                margin: 10px 0;
+                font-weight: 500;
+                @extend %text-lg;
+            }
+
+            p{
+                margin: 10px 10px 3em;
+                text-align: center;
+                @extend %text-sm;
+            }
+        }
+
+        @include mq('md'){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, minmax(200px , 1fr));
+            gap: 2em;
+        }
+        @include mq('lg'){
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, minmax(200px , 1fr));
+            
+        }
+    }
+
+
+}

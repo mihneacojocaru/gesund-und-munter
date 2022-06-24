@@ -1,0 +1,293 @@
+.beratung {
+  padding: 5em 0 5em;
+  &--bg {
+    background-color: $green-light-bg;
+  }
+
+  &__section1 {
+    text-align: center;
+    @include flexy($dir: column, $align: center, $just: center);
+    h2 {
+      @extend %h2-design;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 1em;
+      font-size: $fs-sm;
+    }
+
+    &--containers {
+      margin: 1em 0;
+      max-width: 500px;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      &--container1,
+      &--container2,
+      &--container3,
+      &--container4 {
+        box-shadow: $box-shaddow1;
+        background: $fc-light;
+        margin: 1em 2em;
+        padding: 0 0 1em;
+        h3 {
+          margin: 1em 0;
+          padding: 10px;
+          color: $green-accent-bg;
+        }
+      }
+
+      &--container1 {
+        @include flexy($dir: column, $align: center, $just: space-between);
+      }
+
+      &--container2 {
+        @include flexy($dir: column, $align: center, $just: space-between);
+
+        h5 {
+          font-size: $fs-base;
+          max-width: 80%;
+          padding: 10px 0;
+        }
+
+        ul{
+          max-width: 65%;
+          li {
+            padding: 10px;
+            text-align: left;
+            margin-bottom: 1em;
+
+            &::before {
+              content: "\25CD";
+              color: $gold-accent;
+              font-weight: bold;
+              display: inline-block;
+              width: 1.5em;
+              margin-left: -1.5em;
+            }
+          }
+        }
+
+        span {
+          padding: 1em 0 2em;
+        }
+      }
+      &--container3 {
+        @include flexy($dir: column, $align: center, $just: space-between);
+
+        .list1 {
+          @include flexy($dir: column, $align: flex-start);
+          li {
+            @include flexy($dir: row, $align: center, $just: center);
+            padding: 7px 15px;
+            border: 1px solid $gold-accent;
+            margin: 5px 0;
+            width: 100%;
+            border-radius: 40px;
+            svg {
+              color: $gold-accent;
+              font-size: $fs-3xl;
+              margin-right: 20px;
+            }
+          }
+        }
+
+        h5 {
+          font-size: $fs-base;
+          max-width: 70%;
+          padding: 10px 0;
+        }
+
+        .list2 {
+          max-width: 65%;
+          li {
+            padding: 10px;
+            text-align: left;
+
+            &::before {
+              content: "\25CD";
+              color: $gold-accent;
+              font-weight: bold;
+              display: inline-block;
+              width: 1.5em;
+              margin-left: -1em;
+            }
+          }
+        }
+
+        span {
+          padding: 1em 0 2em;
+        }
+      }
+      &--container4 {
+        @include flexy($dir: column, $align: center, $just: space-between);
+
+        ul{
+          max-width: 65%;
+          li {
+            padding: 10px;
+            text-align: left;
+            margin: 1em 0;
+
+            &::before {
+              content: "\25CD";
+              color: $gold-accent;
+              font-weight: bold;
+              display: inline-block;
+              width: 1.5em;
+              margin-left: -1.5em;
+            }
+          }
+        }
+
+        span {
+          padding: 1em 0 2em;
+        }
+      }
+
+      @include mq("md") {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1.5em;
+        margin: 3em 1em;
+        max-width: $lg;
+
+        &--container1,
+        &--container2,
+        &--container3,
+        &--container4 {
+          margin: 0;
+
+          h3 {
+            margin-top: 2em;
+          }
+
+          p {
+            padding: 0 1em;
+          }
+
+          &--action {
+            flex-direction: row;
+          }
+        }
+
+        &--container1 {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        &--container3 {
+          grid-column: 1/2;
+          grid-row: 2/-1;
+        }
+        &--container2 {
+          grid-column: 2/-1;
+          grid-row: 1/3;
+        }
+        &--container4 {
+          grid-column: 2/-1;
+          grid-row: 3/-1;
+        }
+      }
+    }
+
+    @include mq("md") {
+      p {
+        font-size: $fs-base;
+      }
+    }
+  }
+
+  &__section2 {
+    color: $fc-light;
+    background-color: $green-accent-bg;
+    padding: 2em 1em;
+    @include flexy($dir: row, $align: center, $just: space-around);
+
+    &--text {
+      max-width: 500px;
+      margin-right: 5em;
+     // @include flexy($dir: column, $align: flex-end);
+      h3 {
+        margin: 1em 0;
+      }
+
+      h4 {
+        @include flexy($dir: row, $align: center);
+        text-transform: uppercase;
+        svg {
+          margin-left: 0.5em;
+          font-size: $fs-3xl;
+          display: none;
+        }
+      }
+    }
+
+    
+
+    @include mq("md") {
+      padding: 2em 5em;
+      &--text {
+        h4 {
+          svg {
+            display: inherit;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__section3 {
+    &--title {
+      margin: 4em 0 2em;
+      text-align: center;
+      color: $fc-dark;
+      h4{
+        font-weight: 400;
+        margin: 10px;
+      }
+
+      h5{
+        font-weight: 300;
+      }
+
+    }
+
+    &--cardContainer {
+      @include flexy(
+        $dir: row,
+        $align: center,
+        $just: space-around,
+        $wrap: wrap
+      );
+      gap: 1em;
+
+      &--card {
+        max-width: 315px;
+        padding: 11px;
+        @include flexy($dir: column, $align: center, $just: center);
+        text-align: center;
+
+        svg {
+          color: $gold-accent;
+          margin: 20px;
+          font-size: $fs-4xl;
+        }
+
+        &:nth-child(1) {
+          margin-top: 13px;
+        }
+
+        h3 {
+          @extend %h3-design;
+        }
+
+        p {
+          font-size: $fs-sm;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
