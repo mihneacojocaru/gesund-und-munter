@@ -76,6 +76,7 @@
       &--container3 {
         @include flexy($dir: column, $align: center, $just: space-between);
 
+        padding: 0 10px;
         .list1 {
           @include flexy($dir: column, $align: flex-start);
           li {
@@ -158,6 +159,7 @@
         &--container3,
         &--container4 {
           margin: 0;
+          padding: 0;
 
           h3 {
             margin-top: 2em;
@@ -206,7 +208,7 @@
 
     &--text {
       max-width: 500px;
-      margin-right: 5em;
+     // margin-right: 5em;
      // @include flexy($dir: column, $align: flex-end);
       h3 {
         margin: 1em 0;

@@ -6,17 +6,17 @@
         // @include flexy($dir: column, $just: space-around);
         //grid positioning
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr auto;
+        justify-content: center;
         &--element1{
             grid-row: 1/2;
         }
         &--element3{
-            grid-row: 1/2;
+            grid-row: 2/3;
         }
         &--element2{
             grid-row: 3/-1;
-            grid-column: 1/-1;
         }
         // end of grid positioning
 

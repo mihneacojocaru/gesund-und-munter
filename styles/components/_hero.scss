@@ -17,7 +17,7 @@
       width: 310px;
       height: 300px;
       margin-top: 60px;
-      margin-left: 3em;
+      margin-left: .5em;
       margin-bottom: -30px;
       grid-column: 3/-1;
       padding-right: 3em;
@@ -79,6 +79,7 @@
       img {
         width: 500px;
         height: 500px;
+        margin-left: -5em;
       }
     }
   }
