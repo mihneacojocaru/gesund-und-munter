@@ -1,11 +1,11 @@
 import React from "react";
 import {
   BsWhatsapp,
-  BsTelephone,
   BsInfoCircle,
   BsMailbox,
   BsInstagram,
 } from "react-icons/bs";
+import {RiFilePaper2Line} from 'react-icons/ri'
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/assets/LOGO.png";
@@ -22,7 +22,7 @@ export default function Footer() {
                target="_blank"
                rel="noreferrer"
             >
-              <BsWhatsapp /> +0152123456789
+              <BsWhatsapp /> 0159 063 35291
             </a>
             </li>
             <li>
@@ -31,7 +31,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsMailbox /> email@email.de
+                <BsMailbox /> franziskascheidt@gmail.com
               </a>
             </li>
             <li>
@@ -60,14 +60,19 @@ export default function Footer() {
                 <BsInfoCircle /> Impressum
               </a>
             </Link>
+            <Link href="/datenschutz">
+              <a>
+                <RiFilePaper2Line /> Datenschutzerklärung
+              </a>
+            </Link>
           </span>
         </div>
       </div>
       <div className="footer__copyright">
         <p>
-          Copyright &copy; Gesund und Munter Beratung 2022. All rights reserved.{" "}
+          Copyright &copy; Gesund und Munter Beratung 2022. Alle Rechte vorbehalten.{" "}
           <small>
-            Designed by{" "}
+          Design und Konzeption von{" "}
             <a
               href="https://mihneacojocaru.github.io/"
               target="_blank"

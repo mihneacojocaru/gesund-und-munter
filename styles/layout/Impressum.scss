@@ -11,6 +11,10 @@
         padding: 1em 0;
     }
 
+    h5{
+        padding: 10px;
+    }
+
     p{
         padding: 10px;
 
@@ -20,6 +24,17 @@
 
         &:last-child{
             margin-bottom: 2em;
+        }
+    }
+
+    ul{
+        padding-left: 25px;
+        li{
+            list-style: circle;
+            padding: 5px;
+            a{
+                color: $green-accent-bg;
+            }
         }
     }
 }

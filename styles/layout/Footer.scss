@@ -79,8 +79,9 @@
                 padding: 10px;
 
                 a{
-                    @include flexy($dir:row, $just:center, $align:center);
+                    @include flexy($dir:row, $just:flex-start, $align:center);
                     color: $fc-dark;
+                    padding: 5px 0;
                 }
 
                 svg{

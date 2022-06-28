@@ -35,7 +35,7 @@ export default function About() {
         </div>
       </div>
       <div className="about__paragraph2">
-        <img src="/assets/apples_pic1.png" alt="apples in a basket" />
+        <img src="/assets/apples_pic1.png" alt="Gesunde Äppfel in einem Korb" />
         <div className="about__paragraph2--text">
           <h3>Menschen</h3>
           <p>
@@ -48,7 +48,7 @@ export default function About() {
         </div>
       </div>
       <div className="about__paragraph3">
-        <img src="/assets/berries_pic3.png" alt="apples in a basket" />
+        <img src="/assets/wald.png" alt="Grüner Wald aus Tannen von oben" />
         <div className="about__paragraph3--text">
           <h3>Waldverliebt</h3>
           <p>
@@ -57,7 +57,7 @@ export default function About() {
         </div>
       </div>
       <div className="about__paragraph4">
-        <img src="/assets/salat_pic2.png" alt="apples in a basket" />
+        <img src="/assets/group.png" alt="Gruppen von jungen Menschen auf einem Hügel mit schöner Aussicht" />
         <div className="about__paragraph4--text">
           <h3>Glaube</h3>
           <p>
