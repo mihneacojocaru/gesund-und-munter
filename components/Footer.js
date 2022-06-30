@@ -47,7 +47,7 @@ export default function Footer() {
         <div className="footer__elements--element2">
           <Link href="/">
             <a className="footer__elements--element2--logo">
-              <Image src={logo} width="200px" height="62px" />
+              <Image src={logo} width="200px" height="62px" alt="gesund und munter logo"/>
             </a>
           </Link>
           <img src="/assets/Zertifizierung.png" alt="zertifizierung logo" />

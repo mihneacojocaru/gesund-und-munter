@@ -62,7 +62,7 @@ export default function Header() {
         <div className="header__logo">
           <Link href="/">
             <a>
-              <Image src={logo} width="200px" height="62px" />
+              <Image src={logo} width="200px" height="62px" alt="gesund und munter logo" />
             </a>
           </Link>
         </div>

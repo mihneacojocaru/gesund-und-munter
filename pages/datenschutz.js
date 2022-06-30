@@ -582,10 +582,10 @@ export default function impressum() {
         </p>
         <ul>
           <li>
-            <strong>Personenbezogene Daten</strong>: "Personenbezogene Daten“
+            <strong>Personenbezogene Daten</strong>: &quot;Personenbezogene Daten&quot;
             sind alle Informationen, die sich auf eine identifizierte oder
-            identifizierbare natürliche Person (im Folgenden "betroffene
-            Person“) beziehen; als identifizierbar wird eine natürliche Person
+            identifizierbare natürliche Person (im Folgenden &quot;betroffene
+            Person&quot;) beziehen; als identifizierbar wird eine natürliche Person
             angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung
             zu einer Kennung wie einem Namen, zu einer Kennnummer, zu
             Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem
@@ -595,14 +595,14 @@ export default function impressum() {
             natürlichen Person sind.
           </li>
           <li>
-            <strong>Verantwortlicher</strong>: Als "Verantwortlicher“ wird die
+            <strong>Verantwortlicher</strong>: Als &quot;Verantwortlicher&quot; wird die
             natürliche oder juristische Person, Behörde, Einrichtung oder andere
             Stelle, die allein oder gemeinsam mit anderen über die Zwecke und
             Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
             bezeichnet.
           </li>
           <li>
-            <strong>Verarbeitung</strong>: "Verarbeitung" ist jeder mit oder
+            <strong>Verarbeitung</strong>: &quot;Verarbeitung&quot; ist jeder mit oder
             ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede
             solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten.
             Der Begriff reicht weit und umfasst praktisch jeden Umgang mit

@@ -14,7 +14,7 @@ export default function PageNotFound() {
         router.push('/')
     }, 3000)
     
-  }, [])
+  })
 
   return (
     <Layout>
