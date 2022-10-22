@@ -11,6 +11,9 @@ import Image from "next/image";
 import logo from "../public/assets/LOGO.png";
 
 export default function Footer() {
+
+  const yearNow = new Date().getFullYear()
+
   return (
     <div className="footer">
       <div className="footer__elements container">
@@ -70,7 +73,7 @@ export default function Footer() {
       </div>
       <div className="footer__copyright">
         <p>
-          Copyright &copy; Gesund und Munter Beratung 2022. Alle Rechte vorbehalten.{" "}
+          Copyright &copy; Gesund und Munter Beratung {yearNow}. Alle Rechte vorbehalten.{" "}
           <small>
           Design und Konzeption von{" "}
             <a
